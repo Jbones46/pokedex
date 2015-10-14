@@ -12,6 +12,7 @@
 		D0884C251BCEDC66004E5884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0884C231BCEDC66004E5884 /* Main.storyboard */; };
 		D0884C271BCEDC66004E5884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0884C261BCEDC66004E5884 /* Assets.xcassets */; };
 		D0884C2A1BCEDC66004E5884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0884C281BCEDC66004E5884 /* LaunchScreen.storyboard */; };
+		D09F30881BCF00C600DF5AC7 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = D09F30871BCF00C600DF5AC7 /* pokemon.csv */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D0884C261BCEDC66004E5884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0884C291BCEDC66004E5884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0884C2B1BCEDC66004E5884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09F30871BCF00C600DF5AC7 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				D0884C211BCEDC66004E5884 /* ViewController.swift */,
 				D0884C231BCEDC66004E5884 /* Main.storyboard */,
 				D0884C261BCEDC66004E5884 /* Assets.xcassets */,
+				D09F30871BCF00C600DF5AC7 /* pokemon.csv */,
 				D0884C281BCEDC66004E5884 /* LaunchScreen.storyboard */,
 				D0884C2B1BCEDC66004E5884 /* Info.plist */,
 			);
@@ -124,6 +127,7 @@
 			files = (
 				D0884C2A1BCEDC66004E5884 /* LaunchScreen.storyboard in Resources */,
 				D0884C271BCEDC66004E5884 /* Assets.xcassets in Resources */,
+				D09F30881BCF00C600DF5AC7 /* pokemon.csv in Resources */,
 				D0884C251BCEDC66004E5884 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				D0884C301BCEDC66004E5884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
