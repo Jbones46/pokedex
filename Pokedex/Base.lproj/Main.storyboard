@@ -182,6 +182,9 @@
                                             <constraint firstAttribute="height" constant="35" id="mtA-Of-oJN"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="gHh-Wd-RLf" eventType="touchUpInside" id="DdW-bS-MFu"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-pj-cb4">
                                         <rect key="frame" x="177" y="13" width="247" height="30"/>
@@ -407,7 +410,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iit-qg-fMc">
                                 <rect key="frame" x="20" y="492" width="560" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="0iy-Fq-H8l">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="0iy-Fq-H8l">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                         <animations/>
                                         <constraints>
@@ -415,7 +418,7 @@
                                             <constraint firstAttribute="height" constant="100" id="LYd-sf-T8H"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-5v-JSZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-5v-JSZ">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <animations/>
                                         <constraints>
@@ -456,7 +459,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="PokedexIdLbl" destination="U0q-uQ-qSp" id="ywc-Yp-AlH"/>
+                        <outlet property="baseAttackLbl" destination="RQA-5S-YSh" id="3YN-Ka-Hfq"/>
+                        <outlet property="currentEvoImg" destination="0iy-Fq-H8l" id="u5s-Se-4Ph"/>
+                        <outlet property="defenseLbl" destination="A55-Zh-6NS" id="Kcl-W6-zWr"/>
+                        <outlet property="descriptionLbl" destination="XEo-Q9-TuN" id="4eA-Ip-RDy"/>
+                        <outlet property="evoLbl" destination="eqP-1l-Mkk" id="d1K-gL-jw3"/>
+                        <outlet property="heightLbl" destination="CCc-BC-VbA" id="QWw-JM-8HI"/>
+                        <outlet property="mainImgLbl" destination="Bd0-OC-QdU" id="76L-Q4-9mB"/>
                         <outlet property="namelbl" destination="n1b-pj-cb4" id="AE2-r1-PXe"/>
+                        <outlet property="nextEvoImg" destination="fg4-5v-JSZ" id="9LV-HZ-r7U"/>
+                        <outlet property="typeLbl" destination="Chy-cA-p31" id="4tK-LA-aex"/>
+                        <outlet property="weightLbl" destination="q1z-vf-mki" id="qtc-mO-ZgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKB-aj-bAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
