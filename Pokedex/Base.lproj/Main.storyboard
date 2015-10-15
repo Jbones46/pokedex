@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-V6-9oE">
+                                <rect key="frame" x="0.0" y="99" width="600" height="501"/>
+                                <animations/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-ne-CyV">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <animations/>
@@ -25,6 +29,11 @@
                                     <constraint firstAttribute="height" constant="55" id="2es-zL-Kam"/>
                                 </constraints>
                             </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="06n-GB-bWq">
+                                <rect key="frame" x="0.0" y="55" width="600" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7LO-Za-hpO">
                                 <rect key="frame" x="20" y="119" width="560" height="461"/>
                                 <animations/>
@@ -36,21 +45,24 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="78F-ZB-OaY">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="78F-ZB-OaY" customClass="PokeCellCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="297" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-5V-HVr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="96"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="115" translatesAutoresizingMaskIntoConstraints="NO" id="prb-pc-kg2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="89"/>
                                                     <animations/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIB-SF-8CC">
-                                                    <rect key="frame" x="0.0" y="96" width="110" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-Ti-73p">
+                                                    <rect key="frame" x="0.0" y="89" width="110" height="21"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.98974358969999998" green="0.18956151630000001" blue="0.1744308671" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="2Dh-VY-1br"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -62,27 +74,21 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="0.7080010775862069" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="pIB-SF-8CC" firstAttribute="top" secondItem="qvN-5V-HVr" secondAttribute="bottom" id="3g0-0b-oCv"/>
-                                            <constraint firstAttribute="trailing" secondItem="pIB-SF-8CC" secondAttribute="trailing" id="4gt-Sk-32M"/>
-                                            <constraint firstItem="qvN-5V-HVr" firstAttribute="top" secondItem="78F-ZB-OaY" secondAttribute="top" id="5gD-2x-UrB"/>
-                                            <constraint firstItem="pIB-SF-8CC" firstAttribute="top" secondItem="qvN-5V-HVr" secondAttribute="bottom" id="D5p-BL-BBj"/>
-                                            <constraint firstItem="qvN-5V-HVr" firstAttribute="leading" secondItem="78F-ZB-OaY" secondAttribute="leading" id="IEX-4j-GCa"/>
-                                            <constraint firstAttribute="bottom" secondItem="pIB-SF-8CC" secondAttribute="bottom" id="XkW-QL-eIQ"/>
-                                            <constraint firstItem="pIB-SF-8CC" firstAttribute="leading" secondItem="78F-ZB-OaY" secondAttribute="leading" id="bvA-pO-Kvv"/>
-                                            <constraint firstAttribute="trailing" secondItem="qvN-5V-HVr" secondAttribute="trailing" id="m2Q-Av-L3m"/>
+                                            <constraint firstAttribute="trailing" secondItem="DCs-Ti-73p" secondAttribute="trailing" id="1CL-gK-BaB"/>
+                                            <constraint firstAttribute="trailing" secondItem="prb-pc-kg2" secondAttribute="trailing" id="2sq-Kf-vAe"/>
+                                            <constraint firstItem="prb-pc-kg2" firstAttribute="top" secondItem="78F-ZB-OaY" secondAttribute="top" id="fXT-Vr-Wvd"/>
+                                            <constraint firstItem="DCs-Ti-73p" firstAttribute="top" secondItem="prb-pc-kg2" secondAttribute="bottom" id="fqU-AT-Spf"/>
+                                            <constraint firstItem="prb-pc-kg2" firstAttribute="leading" secondItem="78F-ZB-OaY" secondAttribute="leading" id="lci-kh-XYS"/>
+                                            <constraint firstAttribute="bottom" secondItem="DCs-Ti-73p" secondAttribute="bottom" id="o8y-Gi-TJD"/>
+                                            <constraint firstItem="DCs-Ti-73p" firstAttribute="leading" secondItem="78F-ZB-OaY" secondAttribute="leading" id="zzE-4g-mSA"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="DCs-Ti-73p" id="fwK-qd-WT0"/>
+                                            <outlet property="thumbImg" destination="prb-pc-kg2" id="NFy-cg-y0Z"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="06n-GB-bWq">
-                                <rect key="frame" x="0.0" y="55" width="600" height="44"/>
-                                <animations/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-V6-9oE">
-                                <rect key="frame" x="0.0" y="99" width="600" height="501"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -109,6 +115,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="7LO-Za-hpO" id="cAb-Ow-9uC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +125,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="297" width="120" height="120"/>
+        <image name="115" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
     </resources>
 </document>
